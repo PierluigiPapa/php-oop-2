@@ -1,5 +1,6 @@
 <?php
 include_once __DIR__ . '/models/product.php'
+include_once __DIR__ . '/models/items.php'
 ?>
 
 
