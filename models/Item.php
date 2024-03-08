@@ -1,6 +1,6 @@
 <?php
 
-class Items {
+class Item {
     public $type;
 
     public function __construct($_type) {
