@@ -1,11 +1,24 @@
 <?php
 
-// Definizione del trait Discount
+
 trait Discount {
     protected $discountPercentage;
 
     public function setDiscountPercentage($percentage) {
-        $this->discountPercentage = $percentage;
+
+        try { 
+            if(!is_string($percentage)) {
+                throw new Exception("Il prodotto non è disponibile" );
+            } 
+            
+            $this->discountPercentage = $percentage;
+            // var_dump($percentage);
+        
+        } catch (Exception $e) {
+            echo "<pre class='text-danger fw-bold'>";              
+            echo "Comunicazione: " . $e->getMessage();
+            echo "</pre>";
+        }
     }
 
     public function applyDiscount() {
