@@ -1,6 +1,5 @@
 <?php
 
-
 trait Discount {
     protected $discountPercentage;
 
@@ -8,8 +7,8 @@ trait Discount {
 
         try { 
             if(!is_string($percentage)) {
-                throw new Exception("Il prodotto non è disponibile" );
-            } 
+                throw new Exception("Il prodotto non è scontato" );
+            }
             
             $this->discountPercentage = $percentage;
             // var_dump($percentage);
