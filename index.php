@@ -46,7 +46,7 @@ $products = [$dogToy, $dogFood, $catFood, $catToy, $fishAquarium, $fishFood];
             
             <div class="col-4 mb-5">
                 <div class="card h-100 position-relative shadow"> 
-                    <img src="<?php echo $product->img; ?>" class="card-img-top img-fluid" alt="...">
+                    <img src="<?php echo $product->img; ?>" class="card-img-top img-fluid">
                     
                     <div class="card-body">
                         <h5 class="card-title text-center">
@@ -59,19 +59,21 @@ $products = [$dogToy, $dogFood, $catFood, $catToy, $fishAquarium, $fishFood];
                         
                         <div class="position-absolute top-0 me-2 py-3 end-0"> 
                             <h6 class="card-subtitle">
-                                <?php echo $product->icon; ?>
+                            <?php echo $product->icon; ?>
                             </h6>
                         </div>
                         
                         <div class="text-center">
                             <?php $product->setDiscountPercentage(10); ?>
-                            <button type="button" class="btn btn-dark"> Acquista per <?php echo number_format($product->getDiscountedPrice(), 2); ?>&euro;</button>
+                            <p class="mb-1"><s>Prezzo base: <?php echo number_format($product->getPrice(), 2); ?>&euro;</s></p>
+                            <p class="mb-0">Prezzo scontato: <?php echo number_format($product->getDiscountedPrice(), 2); ?>&euro;</p>
+                            <button type="button" class="btn btn-dark my-3">Acquista <i class="fa-solid fa-cart-shopping"></i></button>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+        </div> 
         <?php } ?>
-        </section>
     </main>
 
 <!-- LINK BOOTSTRAP - JAVASCRIPT -->

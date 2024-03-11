@@ -17,7 +17,6 @@ trait Discount {
     }
 }
 
-// Definizione della classe Product con l'utilizzo del trait Discount
 class Product {
     use Discount;
 
