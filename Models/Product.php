@@ -37,13 +37,15 @@ class Product {
     public $price;
     public $img;
     public $category;
+    public $type;
 
-    public function __construct($_title, $_icon, $_price, $_img, $_category) {
+    public function __construct($_title, $_icon, $_price, $_img, $_category, $_type) {
         $this->title = $_title;
         $this->icon = $_icon;
         $this->price = $_price;
         $this->img = $_img;
         $this->category = $_category;
+        $this->type = $_type;
     }
 
     public function getProductInfo(): string {
