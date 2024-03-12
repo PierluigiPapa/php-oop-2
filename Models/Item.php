@@ -5,8 +5,6 @@ class Item extends Product{
 
     public function __construct($_title, $_icon, $_price, $_img, $_category, $_type) {
         $this->type = $_type;
-
-        parent::__construct($_title, $_icon, $_price, $_img, $_category);
     }
 }
 
